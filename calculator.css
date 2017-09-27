@@ -1,0 +1,24 @@
+#calFrame{
+    width: 490px;
+    height: 380px;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: grey;
+}
+            
+#calDisplay{
+    width: 490px;
+    height: 80px;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 300%;
+    text-align: right;
+}
+            
+.button{
+    float: left;
+    width:  110px;
+    height: 50px;
+    margin: 10px 0px 0px 10px;
+    font-size: 150%;   
+}
