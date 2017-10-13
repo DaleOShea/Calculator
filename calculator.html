@@ -1,36 +1,103 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <link rel ="stylesheet" type="text/css" href="calculator.css"/>
-  <title>Calculator</title>
-</head>
-<body>
-  <div id="calculator">
-    <input type="text" readonly="readonly" placeholder="0">
-    <div class="flex-container">
-      <button class="flex-item">(</button>
-      <button class="flex-item">)</button>
-      <button class="flex-item">±</button>
-      <button class="flex-item">÷</button>
-      <button class="flex-item">7</button>
-      <button class="flex-item">8</button>
-      <button class="flex-item">9</button>
-      <button class="flex-item">x</button>
-      <button class="flex-item">4</button>
-      <button class="flex-item">5</button>
-      <button class="flex-item">6</button>
-      <button class="flex-item">-</button>
-      <button class="flex-item">1</button>
-      <button class="flex-item">2</button>
-      <button class="flex-item">3</button>
-      <button class="flex-item">+</button>
-      <button class="flex-item">0</button>
-      <button class="flex-item">.</button>
-      <button class="flex-item">C</button>
-      <button class="flex-item">=</button>
-    </div>
-  </div>
-</body>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <link rel="stylesheet" type="text/css" href="calculator.css">
+      <title>Calculator</title>
+    </head>
+    
+    <body>
+      <div id="calculator">
+          
+          <form name="calculator">
+          <input name="result" type="text" readonly="readonly" placeholder="0">
+          </form>
+        
+        <div class="flex-container">
+          <button class="flex-item" >(</button>
+          <button class="flex-item" >)</button>
+          <button class="flex-item" >±</button>
+          <button class="flex-item" onclick="btn7()">÷</button>
+          <button class="flex-item" onclick="btn7()">7</button>
+          <button class="flex-item" onclick="btn8()">8</button>
+          <button class="flex-item" onclick="btn9()">9</button>
+          <button class="flex-item" onclick="btn7()">x</button>
+          <button class="flex-item" onclick="btn4()">4</button>
+          <button class="flex-item" onclick="btn5()">5</button>
+          <button class="flex-item" onclick="btn6()">6</button>
+          <button class="flex-item" onclick="btn7()">-</button>
+          <button class="flex-item" onclick="btn1()">1</button>
+          <button class="flex-item" onclick="btn2()">2</button>
+          <button class="flex-item" onclick="btn3()">3</button>
+          <button class="flex-item" onclick="sum()">+</button>
+          <button class="flex-item" onclick="btn0(0)">0</button>
+          <button class="flex-item" >.</button>
+          <button class="flex-item" >C</button>
+          <button class="flex-item" onclick="equal()">=</button>
+        </div>
+      </div>
+        
+        
+         <script>
+             
+             
+             
+             function btn7(){
+                 document.calculator.result.value +="7";
+                }
+             
+             function btn8(){
+                 document.calculator.result.value +="8";
+                }
+             
+             function btn9(){
+                 document.calculator.result.value +="9";
+                }
+             
+             function btn4(){
+                 document.calculator.result.value +="4";
+                }
+             
+             function btn5(){
+                 document.calculator.result.value +="5";
+                }
+             
+             function btn6(){
+                 document.calculator.result.value +="6";
+                }
+             
+             function btn1(){
+                 document.calculator.result.value +="1";
+                }
+             
+             function btn2(){
+                 document.calculator.result.value +="2";
+                }
+             
+             function btn3(){
+                 document.calculator.result.value +="3";
+                }
+             
+             function sum(){
+                 document.calculator.result.value +="+";
+             }
+             
+             function btn0(){
+                 document.calculator.result.value +="0";
+                }
+             
+             function equal(){
+                 
+                 var res = eval(document.calculator.result.value);
+                 document.calculator.result.value = res;
+             }
+             
+             
+             
+             
+             
+        </script>
+    </body>
+    
 </html>
