@@ -15,34 +15,58 @@
           </form>
         
         <div class="flex-container">
-          <button class="flex-item" >(</button>
-          <button class="flex-item" >)</button>
-          <button class="flex-item" >±</button>
-          <button class="flex-item" onclick="btn7()">÷</button>
-          <button class="flex-item" onclick="btn7()">7</button>
-          <button class="flex-item" onclick="btn8()">8</button>
-          <button class="flex-item" onclick="btn9()">9</button>
-          <button class="flex-item" onclick="btn7()">x</button>
-          <button class="flex-item" onclick="btn4()">4</button>
-          <button class="flex-item" onclick="btn5()">5</button>
-          <button class="flex-item" onclick="btn6()">6</button>
-          <button class="flex-item" onclick="btn7()">-</button>
-          <button class="flex-item" onclick="btn1()">1</button>
-          <button class="flex-item" onclick="btn2()">2</button>
-          <button class="flex-item" onclick="btn3()">3</button>
-          <button class="flex-item" onclick="sum()">+</button>
-          <button class="flex-item" onclick="btn0(0)">0</button>
-          <button class="flex-item" >.</button>
-          <button class="flex-item" >C</button>
-          <button class="flex-item" onclick="equal()">=</button>
+          <button class="flex-item" value="(" onclick="btnLeftBrac()">(</button>
+          <button class="flex-item" value=")" onclick="btnRightBrac()">)</button>
+          <button class="flex-item" value="±" onclick="btnThingy()">±</button>
+          <button class="flex-item" value="/" onclick="btnDivide()" >÷</button>
+            
+          <button class="flex-item" value="7" onclick="btn7()">7</button>
+          <button class="flex-item" value="8" onclick="btn8()">8</button>
+          <button class="flex-item" value="9" onclick="btn9()">9</button>
+          <button class="flex-item" value="x" onclick="btnMultiply()">x</button>
+            
+          <button class="flex-item" value="4" onclick="btn4()">4</button>
+          <button class="flex-item" value="5" onclick="btn5()">5</button>
+          <button class="flex-item" value="6" onclick="btn6()">6</button>
+          <button class="flex-item" value="-" onclick="btnMinus()" >-</button>
+            
+          <button class="flex-item" value="1" onclick="btn1()">1</button>
+          <button class="flex-item" value="2" onclick="btn2()">2</button>
+          <button class="flex-item" value="3" onclick="btn3()">3</button>
+          <button class="flex-item" value="+" onclick="btnPlus()">+</button>
+            
+          <button class="flex-item" value="0" onclick="btn0(0)">0</button>
+          <button class="flex-item" value="." >.</button>
+          <button class="flex-item" value="C"onclick="clr()">C</button>
+          <button class="flex-item" value="="onclick="equal()">=</button>
         </div>
       </div>
         
         
-         <script>
+         <script> 
              
+             function btnThingy(){
+                 document.calculator.result.value +="±";
+             }
              
+             function btnLeftBrac(){
+                 document.calculator.result.value +="(";
+             }
+             function btnRightBrac(){
+                 document.calculator.result.value +=")";
+             }
              
+             function btnMultiply(){
+                document.calculator.result.value +="x";
+             }
+             
+             function btnDivide(){
+                document.calculator.result.value +="÷";
+             }
+             
+             function btnMinus(){
+                 document.calculator.result.value +="-";
+             }
              function btn7(){
                  document.calculator.result.value +="7";
                 }
@@ -79,7 +103,7 @@
                  document.calculator.result.value +="3";
                 }
              
-             function sum(){
+             function btnPlus(){
                  document.calculator.result.value +="+";
              }
              
@@ -93,10 +117,10 @@
                  document.calculator.result.value = res;
              }
              
-             
-             
-             
-             
+             function clr(){  
+                 
+                 document.calculator.result.value = " ";
+             }
         </script>
     </body>
     
