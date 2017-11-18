@@ -124,14 +124,19 @@ try {
           display.value = ' ';
 
         }else if(event.key == '=') {
-
           var result = eval(display.value);
           display.value = result;
-        }else {
 
+        }else {
           display.value += event.key;
         }
       });
     } catch (error) {
         console.log(error.message);
 }
+
+buttonObsv
+  .scan((acc, update) => update(acc), counter)
+  .subscribe(counter => {
+    display.value = counter.value;
+  });
