@@ -1,58 +1,27 @@
-//Methods to simply update the calculator display 
-             
-function btnThingy(){ 
-   document.calculator.result.value +="±";}
+import {Observable} from 'rxjs/Rx';
 
-function btnLeftBrac(){
-   document.calculator.result.value +="(";}
-      
-function btnRightBrac(){
-   document.calculator.result.value +=")";}
-             
-function btnMinus(){
-   document.calculator.result.value +="-";}
+//clear cal display
+display.value = "";
 
-function btn7(){
-   document.calculator.result.value +="7";}
-             
-function btn8(){
-   document.calculator.result.value +="8";}
-
-function btn9(){
-   document.calculator.result.value +="9";}
-
-function btn4(){
-   document.calculator.result.value +="4";}
-             
-function btn5(){
-   document.calculator.result.value +="5";}
-             
-function btn6(){
-   document.calculator.result.value +="6";}
-             
-function btn1(){
-   document.calculator.result.value +="1";}
-             
-function btn2(){
-   document.calculator.result.value +="2";}
-             
-function btn3(){
-    document.calculator.result.value +="3";}
-             
-function btnPlus(){
- document.calculator.result.value +="+";}
-             
-function btn0(){
-   document.calculator.result.value +="0";}
- 
-// method to evalute the given values with the cal display 
-// returns the result to the display
-function equal(){
-   var res = eval(document.calculator.result.value);
-   document.calculator.result.value = res;
-}
-             
-function clr(){       
-   document.calculator.result.value = " ";
-}
-    
+//get button elements in DOM
+const calDisplay = document.getElementById("display");
+const leftBracketBtn = document.getElementById("(");
+const rightBracketBtn = document.getElementById(")");
+const plusMinusBtn = document.getElementById("-1");
+const divideBtn = document.getElementById("/");
+const sevenBtn = document.getElementById("7");
+const eightBtn = document.getElementById("8");
+const nineBtn = document.getElementById("9");
+const multiplyBtn = document.getElementById("*");
+const fourBtn = document.getElementById("4");
+const fiveBtn = document.getElementById("5");
+const sixBtn = document.getElementById("6");
+const minusBtn = document.getElementById("-");
+const oneBtn = document.getElementById("1");
+const twoBtn = document.getElementById("2");
+const threeBtn = document.getElementById("3");
+const addBtn = document.getElementById("+");
+const zeroBtn = document.getElementById("0");
+const dotBtn = document.getElementById(".");
+const clearBtn = document.getElementById("C");
+const equalsBtn = document.getElementById("=");
