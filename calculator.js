@@ -48,3 +48,69 @@ const valZero = acc => ({value: acc.value + "0"});
 const valDot = acc => ({value: acc.value + "."});
 const valClear = acc => ({value: acc.value = 0});
 const valEquals = acc => ({value: eval(acc.value)});
+
+try {
+    const buttonObsv = Observable.merge(
+      Observable.fromEvent(leftBracketBtn, 'click').mapTo(valLeftBracket),
+      Observable.fromEvent(rightBracketBtn,'click').mapTo(valRightBracket),
+      Observable.fromEvent(plusMinusBtn, 'click').mapTo(valPlusMinus),
+      Observable.fromEvent(sevenBtn, 'click').mapTo(valSeven),
+      Observable.fromEvent(eightBtn, 'click').mapTo(valEight),
+      Observable.fromEvent(nineBtn, 'click').mapTo(valNine),
+      Observable.fromEvent(multiplyBtn, 'click').mapTo(valMultiple),
+      Observable.fromEvent(fourBtn, 'click').mapTo(valFour),
+      Observable.fromEvent(fiveBtn, 'click').mapTo(valFive),
+      Observable.fromEvent(sixBtn, 'click').mapTo(valsix),
+      Observable.fromEvent(minusBtn, 'click').mapTo(valMinus),
+      Observable.fromEvent(oneBtn, 'click').mapTo(valOne),
+      Observable.fromEvent(twoBtn, 'click').mapTo(valTwo),
+      Observable.fromEvent(threeBtn, 'click').mapTo(valThree),
+      Observable.fromEvent(plusBtn, 'click').mapTo(valPlus),
+      Observable.fromEvent(zeroBtn, 'click').mapTo(valPlus),
+      Observable.fromEvent(dotBtn, 'click').mapTo(valDot),
+      Observable.fromEvent(clearBtn, 'click').mapTo(valClear),
+      Observable.fromEvent(equalsBtn, 'click').mapTo(valEquals))
+
+      var charCode;
+      var charString;
+
+      //handle Keyboard input
+      var keyUps = Observable.fromEvent(document, 'keyup')
+       .filter(function(event) {
+       charCode = event.keyCode || event.which;
+       charString = String.fromCharCode(charCode);
+
+       if (charString == '0' ||
+           charString == '1' ||
+           charString == '2' ||
+           charString == '3' ||
+           charString == '4' ||
+           charString == '5' ||
+           charString == '6' ||
+           charString == '7' ||
+           charString == '8' ||
+           charString == '9' ||
+           charString == '(' ||
+           charString == ')' ||
+           charString == '-' ||
+           charString == '+' ||
+           charString == '=' ||
+           charString == 'x' ||
+           charString == '*' ||
+           charString == 'X' ||
+           charString == '.' ||
+           charString == 'c') {
+            return charString;}
+
+        if (charCode == 107) {
+            return '+';}
+
+        if (charCode == 189){
+            return '-';}
+
+        if (charCode == 191) {
+            return '/';}
+
+        if (charCode == 187) {
+            return '=';}
+      });
