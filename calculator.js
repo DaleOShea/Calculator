@@ -114,3 +114,24 @@ try {
         if (charCode == 187) {
             return '=';}
       });
+
+      keyUps.subscribe(function(event) {
+
+        if(event.key == 'X' || event.key == 'x') {
+          display.value += '*';
+
+        } else if(event.key == 'C' || event.key == 'c') {
+          display.value = ' ';
+
+        }else if(event.key == '=') {
+
+          var result = eval(display.value);
+          display.value = result;
+        }else {
+
+          display.value += event.key;
+        }
+      });
+    } catch (error) {
+        console.log(error.message);
+}
