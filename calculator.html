@@ -7,39 +7,31 @@
       <script src="calculator.js"></script>
       <title>Calculator</title>
     </head>
-    
+
     <body>
       <div id="calculator">
-          
-          <form name="calculator">
-          <input name="result" type="text" readonly="readonly" placeholder="0">
-          </form>
-        
+        <input type="text" name="display" id="display" value="">
         <div class="flex-container">
-          <button class="flex-item" value="(" onclick="btnLeftBrac()">(</button>
-          <button class="flex-item" value=")" onclick="btnRightBrac()">)</button>
-          <button class="flex-item" value="±" onclick="btnThingy()">±</button>
-          <button class="flex-item" value="/" onclick="btnDivide()" >÷</button>
-            
-          <button class="flex-item" value="7" onclick="btn7()">7</button>
-          <button class="flex-item" value="8" onclick="btn8()">8</button>
-          <button class="flex-item" value="9" onclick="btn9()">9</button>
-          <button class="flex-item" value="x" onclick="btnMultiply()">x</button>
-            
-          <button class="flex-item" value="4" onclick="btn4()">4</button>
-          <button class="flex-item" value="5" onclick="btn5()">5</button>
-          <button class="flex-item" value="6" onclick="btn6()">6</button>
-          <button class="flex-item" value="-" onclick="btnMinus()" >-</button>
-            
-          <button class="flex-item" value="1" onclick="btn1()">1</button>
-          <button class="flex-item" value="2" onclick="btn2()">2</button>
-          <button class="flex-item" value="3" onclick="btn3()">3</button>
-          <button class="flex-item" value="+" onclick="btnPlus()">+</button>
-            
-          <button class="flex-item" value="0" onclick="btn0(0)">0</button>
-          <button class="flex-item" value="." >.</button>
-          <button class="flex-item" value="C"onclick="clr()">C</button>
-          <button class="flex-item" value="="onclick="equal()">=</button>
+          <button class="flex-item" id="(" value="(" onClick="display.value += '('">(</button>
+          <button class="flex-item" id=")" value=")" onClick="display.value += ')'">)</button>
+          <button class="flex-item" id="-1"value="±" onClick="display.value *= -1">±</button>
+          <button class="flex-item" id="/" value="/" onClick="display.value += '/'">÷</button>
+          <button class="flex-item" id="7" value="7" onClick="display.value += '7'">7</button>
+          <button class="flex-item" id="8" value="8" onClick="display.value += '8'">8</button>
+          <button class="flex-item" id="9" value="9" onClick="display.value += '9'">9</button>
+          <button class="flex-item" id="*" value="*" onClick="display.value += '*'">x</button>
+          <button class="flex-item" id="4" value="4" onClick="display.value += '4'">4</button>
+          <button class="flex-item" id="5" value="5" onClick="display.value += '5'">5</button>
+          <button class="flex-item" id="6" value="6" onClick="display.value += '6'">6</button>
+          <button class="flex-item" id="-" value="-" onClick="display.value += '-'">-</button>
+          <button class="flex-item" id="1" value="1" onClick="display.value += '1'">1</button>
+          <button class="flex-item" id="2" value="2" onClick="display.value += '2'">2</button>
+          <button class="flex-item" id="3" value="3" onClick="display.value += '3'">3</button>
+          <button class="flex-item" id="+" value="+" onClick="display.value += '+'">+</button>
+          <button class="flex-item" id="0" value="0" onClick="display.value += '0'">0</button>
+          <button class="flex-item" id="." value="." onClick="display.value += '.'">.</button>
+          <button class="flex-item" id="c" value="C" onClick="display.value = ''">C</button>
+          <button class="flex-item" id="=" value="=" onClick="display.value = eval(display.value)">=</button>
         </div>
       </div>
     </body>
